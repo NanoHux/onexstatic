@@ -1,0 +1,382 @@
+
+<!doctype html>
+<html lang="en" >
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Onex - Staking</title>
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet" >
+<link href="css/offcanvas-navbar.css" rel="stylesheet" >
+<link href="css/custom.css" rel="stylesheet" >
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+  </head>
+  <body>
+   
+
+
+<section class="custom_white top_section" style="overflow: hidden; width: 100vw; position: relative; min-height: auto;">
+ 
+
+<div class="container z-10 position-relative">
+    <nav class="navbar navbar-expand-lg " aria-label="Main navigation">
+  
+        <div class="col">
+        <a href="index.html" class="logo d-flex align-items-center"> <img src="images/onex_logo_only.png"> <h1>ONEX</h1></a>
+      </div>
+        <button class="navbar-toggler border-0 p-0 m-0 text-white" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+          <img src="images/menu.svg" class="menu_mobile">
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse custom_onex_menu_bar z-10" id="navbarsExampleDefault">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wallet_features.html">Wallet Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Staking</a>
+            </li>
+          </ul>
+
+        </div>
+       <div class="connect_holder">
+          <button>Connect</button>
+        </div> 
+   
+    </nav>
+</div>
+
+
+<div class="container z-1 position-relative custom_top_content_part">
+  <div class="row d-flex align-items-center">
+
+    <div class="col-lg-12 z-2 position-relative text-center">
+ 
+      <h2 class="py-4">Staking</h2>
+      <h3 class="text-secondary fs-5 fw-light">Staking ONEX has many incredible benefits like extra yields, excellent rewards, and grant access to additional features in the future for the ONEX wallet.
+</h3>
+    </div>
+
+  </div>
+</div>
+
+
+</section>
+
+
+<section class="section_feature section_staking">
+
+  <div class="container">
+    <div class="row align-items-center">
+    
+      <div class="col-md-6 stake_tab">
+        <div class="custom_neu_box stake_holder">
+                  <ul class="nav nav-tabs staking_tab_ul" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                     <button class="nav-link active" id="stake-tab" data-bs-toggle="tab" data-bs-target="#stake-tab-pane" type="button" role="tab" aria-controls="stake-tab-pane" aria-selected="true">Stake</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="unstake-tab" data-bs-toggle="tab" data-bs-target="#unstake-tab-pane" type="button" role="tab" aria-controls="unstake-tab-pane" aria-selected="false">Unstake</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="claim-tab" data-bs-toggle="tab" data-bs-target="#claim-tab-pane" type="button" role="tab" aria-controls="claim-tab-pane" aria-selected="false">Claim</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="restake-tab" data-bs-toggle="tab" data-bs-target="#restake-tab-pane" type="button" role="tab" aria-controls="restake-tab-pane" aria-selected="false">Restake</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="stake-tab-pane" role="tabpanel" aria-labelledby="stake-tab" tabindex="0">
+                      <!-- stake -->
+                        <div class="mt-5 mb-4 row form_set_custom">
+                            <label for="inputbuy" class="col-sm-3 col-form-label">Quantity</label>
+                            <div class="col-sm-9">
+                              <input type="number" class="form-control" placeholder="Min. Quantity 100" id="inputbuy">
+                              <p class="small_message">100 token available.</p>
+                              <p class="error_msg">Please enter atleast minimum 100 token to proceed.</p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary col-12 border-0 p-2 rounded_20 button_running_color mb-2" type="button">Stake</button>
+                      <!-- stake -->    
+                    </div>
+                    <div class="tab-pane fade position-relative" id="unstake-tab-pane" role="tabpanel" aria-labelledby="unstake-tab" tabindex="0">
+                      <img src="images/SVG/history.svg" class="stake_history_ico"  data-bs-toggle="modal" data-bs-target="#unstake_table">
+                      <!-- unstake -->
+                      <div class="mt-5 mb-2 row form_set_custom">
+                          <label for="inputbuy" class="col-sm-4 col-form-label">Staked Token</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" value="100" id="inputbuy" disabled>
+                          </div>
+                        </div>
+                         <div class="mb-4 row form_set_custom">
+                          <label for="inputbuy" class="col-sm-4 col-form-label">Reward Token</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" value="1" id="inputbuy" disabled>
+                          </div>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <label class="form-check-label  small_message" for="flexCheckChecked">
+                            I understand that unstake will result a 7 day cooling off period before my OneX token can be claim.
+                          </label>
+                        </div>
+                        <button class="btn btn-primary col-12 border-0 p-2 rounded_20 button_running_color mb-2" type="button">Unstake All</button>
+                      <!-- unstake -->
+                    </div>
+                    <div class="tab-pane fade" id="claim-tab-pane" role="tabpanel" aria-labelledby="claim-tab" tabindex="0">
+                      <!-- claim -->
+                        <div class="mt-5 mb-4 row form_set_custom">
+                            <label for="inputbuy" class="col-sm-4 col-form-label pe-0">Claimable Token</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" placeholder="Enter Claim Amount" id="inputbuy">
+                              <p class="small_message">100 token available to claim.</p>
+                              <p class="error_msg">Please enter claim amount token to proceed.</p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary col-12 border-0 p-2 rounded_20 button_running_color mb-2" type="button">Stake</button>
+                      <!-- claim -->    
+                    </div>
+                    <div class="tab-pane fade" id="restake-tab-pane" role="tabpanel" aria-labelledby="restake-tab" tabindex="0">
+                       <!-- restake -->
+                      <div class="mt-5 mb-2 row form_set_custom">
+                          <label for="inputbuy" class="col-sm-4 col-form-label">Staked Token</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" value="100" id="inputbuy" disabled>
+                          </div>
+                        </div>
+                         <div class="mb-4 row form_set_custom">
+                          <label for="inputbuy" class="col-sm-4 col-form-label">Reward Token</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" value="1" id="inputbuy" disabled>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary col-12 border-0 p-2 rounded_20 button_running_color mb-2" type="button">Restake All</button>
+                      <!-- restake -->
+                    </div>
+                  </div>
+        </div>
+      </div>
+      <div class="col-md-6 invite_friend">
+        <div class="row">
+          <div class="col justify-content-center d-flex qr_invite_set">
+
+            <div class="mb-4">
+              <h4 class="text-center corporate_color">Refer A Friend</h4>
+              <p class="text-center">Lorem Ipsum..</p>
+              <img src="images/qrcode.png">
+              <hr class="mb-4">
+              <h5 class="text-center corporate_color mb-2">Referral URL</h5>
+              <textarea type="text" class="form-control w-100 mb-3 text-center" id="inputbuy" disabled>https://onexwallet.io/adhoi231234</textarea>
+              <p class="text-center small_message">Click the URL to copy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="unstake_table" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <!-- Vertically centered modal -->
+<div class="modal-dialog modal-dialog-centered ">
+
+        <div class="modal-content">
+          <div class="modal-header pb-0 mb-1"><h4>Unstake History</h4></div>
+  <div class="modal-body">
+          <div class="row">
+            <div class="col ">
+              <div class="table-responsive">
+              <table class="table table-striped table align-middle unstaked_table_set">
+      <thead>
+          <tr>
+            <th scope="col">Unstake Date</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Claimable Date</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+          <tr>
+            <td>2023-06-23 </td>
+            <td>120,000 ONEX</td>
+            <td>2023-06-30</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+<section class="custom_white etc_content_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex align-content-stretch flex-wrap">
+        <div class="card px-4 about_us_thumbnail border-0">
+          <div class="card-body align-items-center d-flex z-1 position-relative">
+            <div>
+              <h3 class="corporate_color d-flex align-items-start">Project</h3>
+              <p class="d-flex align-items-center">ONEX is a DeFi wallet that allows users to manage their cryptocurrencies, interact with various DeFi applications, and access decentralized financial services directly from ONEX.</p>
+              <button class="btn btn_more_info d-flex align-items-end" type="button"><a href="index.html">More Info <img src="images/next_black.svg"></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-flex align-content-stretch flex-wrap">
+        <div class="card px-4 about_us_thumbnail border-0">
+          <div class="card-body align-items-center d-flex z-1 position-relative">
+            <div>
+              <h3 class="corporate_color d-flex align-items-start">About Us</h3>
+              <p class="d-flex align-items-center">Founded by key industry experts in 2018 and based in Singapore, ONEX. is a leading provider of secure 
+and user-friendly DeFi and cryptocurrency eWallet solutions.</p>
+              <button class="btn btn_more_info d-flex align-items-end" type="button"><a href="about.html">More Info <img src="images/next_black.svg"></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-flex align-content-stretch flex-wrap">
+        <div class="card p-4 about_us_thumbnail border-0">
+          <div class="card-body align-items-center d-flex z-1 position-relative">
+            <div>
+              <h3 class="corporate_color">Wallet Features</h3>
+              <p class="">Store Funds, Make Transactions and Track Payments - secure your activities with the essential features of the ONEX Wallet.
+</p>
+              <button class="btn btn_more_info" type="button"><a href="#">More Info <img src="images/next_black.svg"></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="onex_background">
+<div class="container">
+  <div class="row">
+    <div class="col pt-3 text-center text-white">
+      <p>©2023 Copyright ONEX. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+</footer>
+<script src="js/offcanvas-navbar.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/simple_parallax/simpleParallax.js"></script>
+<script type="text/javascript">
+  var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image, {
+  orientation: 'right',
+  overflow: true,
+  scale: 2,
+  maxTransition: 200
+});
+
+
+</script>
+    </body>
+</html>
